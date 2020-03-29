@@ -21,20 +21,18 @@ int ft_pow(int base, int power)
 	return (x);
 }
 
-int main(void)
+int ft_btoi(char *str)
 {
-	char *input = "11111111";
-	int power = 0;
 	int result = 0;
+	int pow = 0;
 	int i = 0;
 
-	power = ft_strlen(input) - 1;
-	while (input[i])
+	pow = ft_strlen(str) - 1;
+	while (str[i])
 	{
-		if (input[i++] == '1')
-			result += ft_pow(2, power);
-		power--; 
+		if (str[i++] == '1')
+			result += ft_pow(2, pow);
+		pow--; 
 	}
-	printf("%d\n", result);
-	return (0);
+	return (result);
 }
